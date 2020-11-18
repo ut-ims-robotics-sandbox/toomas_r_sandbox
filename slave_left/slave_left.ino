@@ -7,10 +7,6 @@ float sensor_value1;
 float sensor_value2;
 float sensor_value3;
 
-char voltBuff[4];
-
-byte myArray[2];
-
 float voltage[4];
 
 void setup() {
@@ -22,7 +18,6 @@ void setup() {
   pinMode(A2, INPUT);
   pinMode(A3, INPUT);
 
-  Serial.begin(9600);
 }
 
 void loop() {
@@ -39,23 +34,17 @@ void requestEvent() {
   sensor_value2 = analogRead(A2) * 5.0/1023.0;
   sensor_value3 = analogRead(A3) * 5.0/1023.0;
 
-  //do conversions
-
+  //do conversions abd calculations
   voltage[0] = sensor_value0;
   voltage[1] = sensor_value1;
   voltage[2] = sensor_value2;
   voltage[3] = sensor_value3;
 
-  voltage[0] = 1.23456;
 
-  for(int i=0; i<4; i++){
-    for(int j=0; j<4; j++){
+  for(int i=0; i<4; i++){ //for every measurement
+    for(int j=0; j<4; j++){ //for every byte in that measurement
       Wire.write(*((unsigned char*)&voltage[i] + j));
     }    
   }
-
   
-  //Serial.println(sensor_value0);
-
-
 }
