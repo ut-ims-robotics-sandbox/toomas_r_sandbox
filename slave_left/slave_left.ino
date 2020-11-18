@@ -34,10 +34,10 @@ void requestEvent() {
   sensor_value2 = analogRead(A2);
   sensor_value3 = analogRead(A3);
 
-  sensor_value0 = 1023;
-  sensor_value1 = 103;
-  sensor_value2 = 800;
-  sensor_value3 = 987;
+//  sensor_value0 = 1023;
+//  sensor_value1 = 103;
+//  sensor_value2 = 800;
+//  sensor_value3 = 987;
 
 
   myArray[0] = (sensor_value0 >> 8) & 0xFF;
