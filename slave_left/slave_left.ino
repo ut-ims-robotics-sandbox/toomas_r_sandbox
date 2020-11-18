@@ -58,21 +58,4 @@ void requestEvent() {
   //Serial.println(sensor_value0);
 
 
-
-//
-//  myArray[0] = (sensor_value0 >> 8) & 0xFF;
-//  myArray[1] = sensor_value0 & 0xFF;
-//  Wire.write(myArray, 2);
-//
-//  myArray[0] = (sensor_value1 >> 8) & 0xFF;
-//  myArray[1] = sensor_value1 & 0xFF;
-//  Wire.write(myArray, 2);
-//  
-//  myArray[0] = (sensor_value2 >> 8) & 0xFF;
-//  myArray[1] = sensor_value2 & 0xFF;
-//  Wire.write(myArray, 2);
-//  
-//  myArray[0] = (sensor_value3 >> 8) & 0xFF;
-//  myArray[1] = sensor_value3 & 0xFF;
-//  Wire.write(myArray, 2);
 }
